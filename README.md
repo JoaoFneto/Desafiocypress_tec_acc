@@ -114,20 +114,6 @@ npm install --save-dev cypress-cucumber-preprocessor
 
 
 
-## (Opcional) Configurar estrutura de testes
-Garanta a seguinte organização:
-
-Código
-cypress/
-  e2e/
-    features/              # arquivos .feature
-    step_definitions/      # steps em JS/TS
-  support/
-    pages/                 # Page Objects
-cypress.config.js          # baseUrl e integrações
-
-
-
 ## Validar instalação
 Abra o Test Runner:
 bash
