@@ -64,5 +64,97 @@ Ao revisar os itens, o usuário remove um dos cafés previamente selecionados e 
 ## Direcionamento para pagamento  
 Após confirmar os itens, o usuário é automaticamente direcionado para a página de pagamento.
 
-##Confirmação da compra  
+
+
+## Confirmação da compra  
 Na página de pagamento, o usuário informa seu nome e e-mail nos campos obrigatórios e confirma o pagamento, finalizando o processo de compra. 
+
+
+
+## Instalação de dependências — passo a passo
+Verificar pré-requisitos
+
+
+
+## Node.js  (versão LTS recomendada) e npm instalados.
+Confirme no terminal:
+bash
+node -v
+npm -v
+
+
+## Clonar o repositório
+bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+
+
+
+## Instalar as dependências do projeto
+Instala tudo que está no package.json:
+bash
+npm install
+
+
+
+## (Opcional) Instalar Cypress manualmente
+
+
+
+Caso esteja montando do zero ou queira atualizar:
+bash
+npm install --save-dev cypress
+
+
+
+## (Opcional) Instalar Cucumber preprocessor
+Para cenários em Gherkin:
+bash
+npm install --save-dev cypress-cucumber-preprocessor
+
+
+
+## (Opcional) Configurar estrutura de testes
+Garanta a seguinte organização:
+
+Código
+cypress/
+  e2e/
+    features/              # arquivos .feature
+    step_definitions/      # steps em JS/TS
+  support/
+    pages/                 # Page Objects
+cypress.config.js          # baseUrl e integrações
+
+
+
+## Validar instalação
+Abra o Test Runner:
+bash
+npx cypress open
+
+
+
+## Executar cenários em Gherkin
+No Test Runner, selecione o arquivo .feature em cypress/e2e/features/.
+Certifique-se de que os step_definitions correspondem exatamente ao texto dos steps.
+
+
+
+## (Opcional) Atualizar dependências
+Para manter tudo atualizado:
+bash
+npm outdated
+npm update
+
+
+
+## (Opcional) Scripts no package.json
+Facilite a execução adicionando:
+json
+{
+  "scripts": {
+    "test:ui": "cypress open",
+    "test:run": "cypress run"
+  }
+}
